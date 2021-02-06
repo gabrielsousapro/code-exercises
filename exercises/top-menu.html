@@ -42,8 +42,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             cursor: pointer;
             transition: all .5s ease-in-out;
         }
@@ -68,11 +68,46 @@
         }
 
         .menu-btn__burger::before {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
         }
 
         .menu-btn__burger::after {
-            transform: translateY(10px);
+            transform: translateY(8px);
+        }
+
+        .overflow-menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 20px;
+            height: 60px;
+        }
+
+        .overflow-menu-icon {
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .overflow-menu-icon::before,
+        .overflow-menu-icon::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .overflow-menu-icon::before {
+            transform: translateY(-8px);
+        }
+
+        .overflow-menu-icon::after {
+            transform: translateY(8px);
         }
     </style>
 </head>
