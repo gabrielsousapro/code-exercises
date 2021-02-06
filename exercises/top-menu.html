@@ -22,6 +22,7 @@
             align-items: center;
             font-size: 1rem;
             line-height: 1.5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .content {
@@ -31,15 +32,56 @@
 
         .menu {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
+            color: #fff;
+        }
+
+        .menu-btn {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger {
+            width: 30px;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn__burger::before {
+            transform: translateY(-10px);
+        }
+
+        .menu-btn__burger::after {
+            transform: translateY(10px);
         }
     </style>
 </head>
 <body>
     <div class="content">
         <header class="menu">
-            <div class="menu-btn"></div>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
             <h1>Page title</h1>
             <div class="overflow-menu"></div>
         </header>
