@@ -32,7 +32,7 @@
 
         .menu {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             color: #fff;
         }
@@ -75,13 +75,17 @@
             transform: translateY(8px);
         }
 
+        h1 {
+            font-size: 1.6rem;
+        }
+
         .overflow-menu {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            width: 20px;
+            width: 60px;
             height: 60px;
         }
 
@@ -109,6 +113,20 @@
         .overflow-menu-icon::after {
             transform: translateY(8px);
         }
+
+        /* Animation */
+
+        .menu-btn.open .menu-btn__burger {
+            transform: translateX(-50px);
+        }
+
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
     </style>
 </head>
 <body>
@@ -123,5 +141,10 @@
             </div>
         </header>
     </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        let menuOpen = false;
+    </script>
 </body>
 </html>
